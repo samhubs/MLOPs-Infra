@@ -70,3 +70,11 @@ Test installation:
 docker run hello-world
 docker compose version
 ```
+12. Install podman
+```sh
+brew install podman
+```
+13. Configure local registry
+```sh
+podman run -d -p 5002:5002 --name registry registry:2
+```

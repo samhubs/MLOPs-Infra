@@ -78,3 +78,12 @@ brew install podman
 ```sh
 podman run -d -p 5002:5002 --name registry registry:2
 ```
+14. VSCode Setup
+  - Install VSCode Configure Extensions:
+    - Python 
+    - Terraform
+    - Kubernetes
+    - YAML
+    - Docker
+    - GitLens
+    - Remote Development

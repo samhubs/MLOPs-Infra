@@ -90,3 +90,44 @@ podman run -d -p 5002:5002 --name registry registry:2
     - Docker
     - GitLens
     - Remote Development
+
+Good job! Now that you have access to all the frameworks we will use, let's start with the infrastructure setup. 
+
+### Basic directory structure
+```
+mlops-platform/
+├── terraform/
+│   ├── environments/
+│   │   ├── dev/
+│   │   ├── staging/
+│   │   └── prod/
+│   ├── modules/
+│   │   ├── eks/
+│   │   ├── networking/
+│   │   ├── security/
+│   │   ├── ecr/                # New module for Docker registry
+│   │   └── monitoring/
+│   └── main.tf
+├── kubernetes/
+│   ├── base/
+│   │   ├── deployments/
+│   │   ├── services/
+│   │   ├── configs/
+│   │   └── monitoring/
+│   └── overlays/
+│       ├── dev/
+│       ├── staging/
+│       └── prod/
+├── scripts/
+│   ├── data_preprocessing/
+│   ├── training/
+│   ├── inference/
+│   └── utils/
+├── models/
+│   └── yolo_skeleton_detection/
+│       ├── model_definition.py
+│       ├── train.py
+│       ├── inference.py
+│       └── requirements.txt
+└── README.md
+```

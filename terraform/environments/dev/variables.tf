@@ -50,3 +50,29 @@ variable "key_name" {
   description = "Name of the SSH key pair"
   type        = string
 }
+
+variable "db_username" {
+  description = "Database username for MLflow"
+  type        = string
+}
+
+variable "db_password" {
+  description = "Database password for MLflow"
+  type        = string
+  sensitive   = true
+}
+
+variable "certificate_arn" {
+  description = "ACM certificate ARN for HTTPS"
+  type        = string
+}
+
+variable "domain_name" {
+  description = "Domain name for MLflow"
+  type        = string
+}
+
+variable "route53_zone_id" {
+  description = "Route 53 hosted zone ID"
+  type        = string
+}

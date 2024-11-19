@@ -1,3 +1,6 @@
+# This project is based on building an end-to-end MLOPs pipeline using Terraform.
+## It includes training and infrastructure based on Kubernetes and AWS.
+
 1. Create a virtual environment
 ```sh
 python3 -m venv my_env

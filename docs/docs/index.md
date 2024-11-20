@@ -1,6 +1,6 @@
 # Learnings
 
-## What is an VPC and how does it manage subnets and why are they important? 
+## 1. What is an VPC and how does it manage subnets and why are they important? 
 
 Virtual private cloud is a dedicated network where you would like to develop and deploy your application. Any user on internet would access the vpc via the internet gateway using its public ip. 
 The CIDR notation: `10.0.0.0/16` means there are `16` bits that are fixed and other `16`, i.e. $2^{16}$ combination ready to be used. 

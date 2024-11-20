@@ -101,11 +101,11 @@ mlops-platform/
 │   │   ├── dev/
 │   │   ├── staging/
 │   │   └── prod/
-│   ├── modules/
+│   ├─ modules/
 │   │   ├── eks/
 │   │   ├── networking/
 │   │   ├── security/
-│   │   ├── ecr/                # New module for Docker registry
+│   │   ├── ecr/       
 │   │   └── monitoring/
 │   └── main.tf
 ├── kubernetes/
@@ -131,3 +131,18 @@ mlops-platform/
 │       └── requirements.txt
 └── README.md
 ```
+### Steps:
+1. Create network variables defining vpc and subnet configs in a `variables.tf` file, the file will look like this: 
+```
+variable "vpc" {
+  type = string
+  description = "VPC for the entire project"
+}
+
+variable "vpc_cidr" {
+  type = string
+  description = "CIDR block for the VPC"
+}
+```
+
+2. Define the module in `main.tf`
